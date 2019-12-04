@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+<div class="container" id="container">
+    <h1 class="text-center my-3">Calculator</h1>
+    <div id="answer" class="text-center bg-light"></div>
+    <div id="inputs" class="form-inline justify-content-center mt-3">
+        <input type="text" id="input-A" class="form-control" placeholder="Введите число A">
+        <input type="text" id="input-B" class="form-control ml-2" placeholder="Введите число B">
+    </div>
+    <div id="controls" class="text-center mt-3">
+        <button type="button" id="add" class="btn btn-primary" data-action="add">Add</button>
+        <button type="button" id="subtract" class="btn btn-primary" data-action="subtract">Subtract</button>
+        <button type="button" id="multiply" class="btn btn-primary" data-action="multiply">Multiply</button>
+        <button type="button" id="divide" class="btn btn-primary" data-action="divide">Divide</button>
+    </div>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script type="application/javascript" src="{% static "js/main.js" %}"></script>
+</body>
+</html>
